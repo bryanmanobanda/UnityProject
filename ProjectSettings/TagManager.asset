@@ -8,11 +8,13 @@ TagManager:
   - Incorrect
   - Drop
   - Vida
+  - Hit
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
@@ -45,6 +47,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: New Layer 1
+  - name: Ground
     uniqueID: 2642931453
     locked: 0

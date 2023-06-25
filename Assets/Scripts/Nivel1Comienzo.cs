@@ -7,9 +7,18 @@ public class Nivel1Comienzo : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(Score.escenaActual == 6)
+        {
+            Score.escenaActual = -1;
+        }
+
         if (collision.tag == "Player")
         {
-            SceneManager.LoadScene(0);
+            Score.escenaActual++;
+            Score.globalPoints = 0;
+            Score.points = 0;
+            Score.correcto = false;
+            SceneManager.LoadScene(Score.escenaActual);
         }
     }
 }

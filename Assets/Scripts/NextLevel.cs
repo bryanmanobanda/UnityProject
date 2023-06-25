@@ -12,10 +12,13 @@ public class NextLevel : MonoBehaviour
     {
         if (collision.tag == "Player") 
         {
-            if(Score.correcto)
+            if(Score.correcto || Score.escenaActual == 3 || Score.escenaActual == 5)
             {
-                Score.correcto = false; 
-                SceneManager.LoadScene(1);
+                Score.escenaActual++;
+                Score.correcto = false;
+                Score.globalPoints += Score.points;
+                Score.points = 0;
+                SceneManager.LoadScene(Score.escenaActual);
             }
             else
             {

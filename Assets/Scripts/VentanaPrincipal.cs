@@ -15,7 +15,9 @@ public class VentanaPrincipal : MonoBehaviour
             if (Score.correcto)
             {
                 Score.correcto = false;
-                SceneManager.LoadScene(2);
+                Score.points = 0;
+                Score.globalPoints = 0;
+                SceneManager.LoadScene(0);
             }
             else
             {
